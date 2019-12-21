@@ -1,5 +1,5 @@
 	var tortuga_up = "./img/tortuga_up.png";
-	var tortuga_down = "./img/tortuga.png";
+	var tortuga_down = "./img/tortuga_2a.png";
 	var prompt = ">";
 	var linea = "";
 	var vieja_linea = "";
