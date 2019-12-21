@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>La Tortuga Logo Online</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="img/la_tortuga.png">
+	<link rel="stylesheet" type="text/css" href="css/css_theme.css">
+</head>
+
+<body>
+    <canvas id="cnv"></canvas>
+    <div id="consola"></div>
+    <div id="iconInfo">
+        <img src="img/info.png" onclick="showInfo();">
+    </div>
+    <div id="info">
+        <div id="iconCerrar">
+            <img src="img/cerrar.png" onclick="hideInfo();">
+        </div>
+        <table>
+            <tr>
+                <td><img id="imgTortuga" src="img/tortugaHelp.png"></td>
+                <td>
+                    <h2><div id="helpTitulo">La Tortuga Logo </div></h2>
+					Version 0.3 en espa&ntilde;ol
+					<br>por Prof. Guadalupe S.
+					<br><a target="_blank" href="html/creditos.html">Prop&oacute;sito  & Licencia</a>
+				</td>
+            </tr>
+        </table>
+        <br> Lista de comandos con ejemplos:
+		<br>
+        <br>
+        <table>
+            <tr>
+                <td><img src="img/fd.png"></td>
+                <td><b>AV&nbsp;</b><i>5</i></td>
+                <td>Avanza 5 pasos.</td>
+            </tr>
+            <tr>
+                <td><img src="img/bk.png"></td>
+                <td><b>RT&nbsp;</b><i>2</i></td>
+                <td>Retrocede 2 pasos.</td>
+            </tr>
+            <tr>
+                <td><img src="img/rt.png"></td>
+                <td><b>GD&nbsp;</b><i>3</i></td>
+                <td>Gira a la Derecha.</td>
+            </tr>
+            <tr>
+                <td><img src="img/lt.png"></td>
+                <td><b>GI&nbsp;</b><i>3</i></td>
+                <td>Gira a la Izquierda.</td>
+            </tr>
+            <tr>
+                <td><img src="img/pu.png"></td>
+                <td><b>SP&nbsp;</b></td>
+                <td>Sin Pluma (no dibuja).</td>
+            </tr>
+            <tr>
+                <td><img src="img/pd.png"></td>
+                <td><b>CP&nbsp;</b></td>
+                <td>Con Pluma (si dibuja).</td>
+            </tr>
+            <tr>
+                <td><img src="img/tortuga.png"></td>
+                <td><b>PV&nbsp;</b></td>
+                <td>Posici&oacute;n vertical.</td>
+            </tr>
+            <tr>
+                <td><img src="img/cs.png"></td>
+                <td><b>LP&nbsp;</b></td>
+                <td>Limpia todo y regresa al inicio.</td>
+            </tr>
+            <tr>
+                <td><img src="img/repeat.png"></td>
+                <td><b>REPITE&nbsp;</b><i>n&nbsp;...</i>&nbsp;</td>
+                <td>repite <b>n</b> veces los comandos.</td>
+            </tr>
+        </table>
+        <br> Presiona F11 para ver en pantalla completa.
+    </div>
+	<script src="js/tortuga.js"></script> 
+</body>
+
+</html>
