@@ -192,6 +192,42 @@
 
 			return a;
 		}
+	}, {
+		nom: "tortuga",
+		f: function(a) {
+			isDrawing = false;
+			tortuga_up = "./img/tortuga_up.png";
+			tortuga_down = "./img/tortuga.png";
+			tortuga.src = tortuga_up;
+			moduloDelta = 0.5;
+			var obj = {
+				x: tortuga_m.px,
+				y: tortuga_m.py,
+				a: tortuga_m.dangulo,
+				t: isDrawing
+			};
+			figura.push(obj);
+
+			return a;
+		}
+	}, {
+		nom: "spider",
+		f: function(a) {
+			isDrawing = false;
+			tortuga_up = "./img/spider_up.png";
+			tortuga_down = "./img/spider.png";
+			tortuga.src = tortuga_up;
+			moduloDelta = 0.9;
+			var obj = {
+				x: tortuga_m.px,
+				y: tortuga_m.py,
+				a: tortuga_m.dangulo,
+				t: isDrawing
+			};
+			figura.push(obj);
+
+			return a;
+		}
 	}];
 
 	var figura = new Array();
