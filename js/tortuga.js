@@ -1,17 +1,17 @@
-	var tortuga_up = "./img/tortuga_up.png";
-	var tortuga_down = "./img/tortuga.png";
+	var logo_up = "./img/tortuga_up.png";
+	var logo_down = "./img/tortuga.png";
 	var prompt = ">";
 	var linea = "";
 	var vieja_linea = "";
-	var tortuga = new Image();
-	var tortuga_m = {};
-	tortuga.src = tortuga_up;
-	tortuga.px = 0;
-	tortuga.py = 0;
-	tortuga.dx = 0;
-	tortuga.dy = 0;
-	tortuga.angulo = 90;
-	tortuga.dangulo = 90;
+	var logo = new Image();
+	var logo_m = {};
+	logo.src = logo_up;
+	logo.px = 0;
+	logo.py = 0;
+	logo.dx = 0;
+	logo.dy = 0;
+	logo.angulo = 90;
+	logo.dangulo = 90;
 
 	var historial = new Array();
 	var historial_pos = -1;
@@ -36,14 +36,14 @@
 		f: function(a) {
 			var delta = new Number(a[0]) * stretch;
 			if (isNaN(delta)) delta = 0 * stretch;
-			var an = tortuga_m.angulo * Math.PI / 180;
-			tortuga_m.dx = tortuga_m.px + Math.cos(an) * delta;
-			tortuga_m.dy = tortuga_m.py - Math.sin(an) * delta;
+			var an = logo_m.angulo * Math.PI / 180;
+			logo_m.dx = logo_m.px + Math.cos(an) * delta;
+			logo_m.dy = logo_m.py - Math.sin(an) * delta;
 
 			var obj = {
-				x: tortuga_m.dx,
-				y: tortuga_m.dy,
-				a: tortuga_m.dangulo,
+				x: logo_m.dx,
+				y: logo_m.dy,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -55,13 +55,13 @@
 		f: function(a) {
 			var delta = new Number(a[0]) * stretch;
 			if (isNaN(delta)) delta = 0 * stretch;
-			var an = tortuga_m.angulo * Math.PI / 180;
-			tortuga_m.dx = tortuga_m.px - Math.cos(an) * delta;
-			tortuga_m.dy = tortuga_m.py + Math.sin(an) * delta;
+			var an = logo_m.angulo * Math.PI / 180;
+			logo_m.dx = logo_m.px - Math.cos(an) * delta;
+			logo_m.dy = logo_m.py + Math.sin(an) * delta;
 			var obj = {
-				x: tortuga_m.dx,
-				y: tortuga_m.dy,
-				a: tortuga_m.dangulo,
+				x: logo_m.dx,
+				y: logo_m.dy,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -73,12 +73,12 @@
 		f: function(a) {
 			var delta = new Number(a[0])*30;
 			if (isNaN(delta)) delta = 0;
-			tortuga_m.dangulo = tortuga_m.angulo - delta;
+			logo_m.dangulo = logo_m.angulo - delta;
 
 			var obj = {
-				x: tortuga_m.px,
-				y: tortuga_m.py,
-				a: tortuga_m.dangulo,
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -90,12 +90,12 @@
 		f: function(a) {
 			var delta = new Number(a[0])*30;
 			if (isNaN(delta)) delta = 0;
-			tortuga_m.dangulo = tortuga_m.angulo + delta;
+			logo_m.dangulo = logo_m.angulo + delta;
 
 			var obj = {
-				x: tortuga_m.px,
-				y: tortuga_m.py,
-				a: tortuga_m.dangulo,
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -106,11 +106,11 @@
 		nom: "sp",
 		f: function(a) {
 			isDrawing = false;
-			tortuga.src = tortuga_up;
+			logo.src = logo_up;
 			var obj = {
-				x: tortuga_m.px,
-				y: tortuga_m.py,
-				a: tortuga_m.dangulo,
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -121,11 +121,11 @@
 		nom: "cp",
 		f: function(a) {
 			isDrawing = true;
-			tortuga.src = tortuga_down;
+			logo.src = logo_down;
 			var obj = {
-				x: tortuga_m.px,
-				y: tortuga_m.py,
-				a: tortuga_m.dangulo,
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -158,20 +158,20 @@
 			pasoFigura = 0;
 			figura = new Array();
 
-			tortuga_m.px = 0;
-			tortuga_m.py = 0;
-			tortuga_m.angulo = 90;
+			logo_m.px = 0;
+			logo_m.py = 0;
+			logo_m.angulo = 90;
 
-			tortuga_m.dx = 0;
-			tortuga_m.dy = 0;
-			tortuga_m.dangulo = 90;
-			tortuga.src = tortuga_up;
+			logo_m.dx = 0;
+			logo_m.dy = 0;
+			logo_m.dangulo = 90;
+			logo.src = logo_up;
 			isDrawing = false;
 
 			var obj = {
-				x: tortuga_m.dx,
-				y: tortuga_m.dy,
-				a: tortuga_m.dangulo,
+				x: logo_m.dx,
+				y: logo_m.dy,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -181,11 +181,11 @@
 	}, {
 		nom: "pv",
 		f: function(a) {
-			tortuga_m.angulo = 90;
+			logo_m.angulo = 90;
 			var obj = {
-				x: tortuga_m.dx,
-				y: tortuga_m.dy,
-				a: tortuga_m.angulo,
+				x: logo_m.dx,
+				y: logo_m.dy,
+				a: logo_m.angulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -196,14 +196,14 @@
 		nom: "tortuga",
 		f: function(a) {
 			isDrawing = false;
-			tortuga_up = "./img/tortuga_up.png";
-			tortuga_down = "./img/tortuga.png";
-			tortuga.src = tortuga_up;
+			logo_up = "./img/tortuga_up.png";
+			logo_down = "./img/tortuga.png";
+			logo.src = logo_up;
 			moduloDelta = 0.5;
 			var obj = {
-				x: tortuga_m.px,
-				y: tortuga_m.py,
-				a: tortuga_m.dangulo,
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -214,14 +214,32 @@
 		nom: "spider",
 		f: function(a) {
 			isDrawing = false;
-			tortuga_up = "./img/spider_up.png";
-			tortuga_down = "./img/spider.png";
-			tortuga.src = tortuga_up;
+			logo_up = "./img/spider_up.png";
+			logo_down = "./img/spider.png";
+			logo.src = logo_up;
+			moduloDelta = 0.7;
+			var obj = {
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
+				t: isDrawing
+			};
+			figura.push(obj);
+
+			return a;
+		}
+	}, {
+		nom: "cat",
+		f: function(a) {
+			isDrawing = false;
+			logo_up = "./img/cat_up.png";
+			logo_down = "./img/cat.png";
+			logo.src = logo_up;
 			moduloDelta = 0.9;
 			var obj = {
-				x: tortuga_m.px,
-				y: tortuga_m.py,
-				a: tortuga_m.dangulo,
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
 				t: isDrawing
 			};
 			figura.push(obj);
@@ -260,51 +278,51 @@
 	};
 
 	function moverA(x, y, ang) {
-		tortuga.px = x;
-		tortuga.py = y;
-		tortuga.angulo = ang;
+		logo.px = x;
+		logo.py = y;
+		logo.angulo = ang;
 	};
 
-	function animarTortuga() {
+	function animarlogo() {
 		if ((figura.length > 0) && (pasoFigura < figura.length)) {
 			var p0 = figura[pasoFigura];
 
-			tortuga.dx = p0.x;
-			tortuga.dy = p0.y;
-			tortuga.dangulo = p0.a;
+			logo.dx = p0.x;
+			logo.dy = p0.y;
+			logo.dangulo = p0.a;
 			isDrawing = p0.t;
 
 			intervaloAnim = setInterval(function() {
-				var dx = tortuga.dx - tortuga.px;
-				var dy = tortuga.dy - tortuga.py;
-				var dang = tortuga.dangulo - tortuga.angulo;
-				tortuga.pendiente = true;
+				var dx = logo.dx - logo.px;
+				var dy = logo.dy - logo.py;
+				var dang = logo.dangulo - logo.angulo;
+				logo.pendiente = true;
 
 				var eps = 0;
 
-				var destX = tortuga.px;
-				var destY = tortuga.py;
-				var destAng = tortuga.angulo;
+				var destX = logo.px;
+				var destY = logo.py;
+				var destAng = logo.angulo;
 
 				if (dx * dx < EPSILON) {
-					tortuga.px = tortuga.dx;
+					logo.px = logo.dx;
 					eps++;
 				} else {
-					destX = tortuga.px + dx * moduloDelta;
+					destX = logo.px + dx * moduloDelta;
 				}
 
 				if (dy * dy < EPSILON) {
-					tortuga.py = tortuga.dy;
+					logo.py = logo.dy;
 					eps++;
 				} else {
-					destY = tortuga.py + dy * moduloDelta;
+					destY = logo.py + dy * moduloDelta;
 				}
 
 				if (dang * dang < EPSILON) {
-					tortuga.angulo = tortuga.dangulo;
+					logo.angulo = logo.dangulo;
 					eps++;
 				} else {
-					destAng = tortuga.angulo + dang * moduloDelta;
+					destAng = logo.angulo + dang * moduloDelta;
 				}
 
 				moverA(destX, destY, destAng);
@@ -313,9 +331,9 @@
 					pasoFigura++;
 
 					if (pasoFigura < figura.length) {
-						tortuga.dx = figura[pasoFigura].x;
-						tortuga.dy = figura[pasoFigura].y;
-						tortuga.dangulo = figura[pasoFigura].a;
+						logo.dx = figura[pasoFigura].x;
+						logo.dy = figura[pasoFigura].y;
+						logo.dangulo = figura[pasoFigura].a;
 						isDrawing = figura[pasoFigura].t;
 					} else {
 						clearInterval(intervaloAnim);
@@ -337,10 +355,11 @@
 	}
 	
 	function ejecutar(comando) {
-		comando = comando.trim();
+		comando = comando.trim(); // Limpia espacios de los extremos
+		comando = comando.replace(/  +/g, ' '); // Limpia espacios inecesarios (deja uno)  /\s\s+/g
 		var ops = comando.split(" ");
 		if (findCountNeedlesHaystack("REPITE", ops) > 1) ops = ["LP"];
-		var t = tortuga;
+		var t = logo;
 		if (pasoFigura < figura.length - 1) {
 			t = figura[figura.length - 1];
 			t.px = t.x;
@@ -351,7 +370,7 @@
 			t.dangulo = t.a;
 		}
 
-		tortuga_m = {
+		logo_m = {
 			px: t.px,
 			py: t.py,
 			dx: t.dx,
@@ -367,9 +386,9 @@
 
 				if (cmd.nom.slice(0, ops[0].length).toLowerCase() == ops[0].toLowerCase()) {
 					ops = cmd.f(ops.slice(1));
-					tortuga_m.px = tortuga_m.dx;
-					tortuga_m.py = tortuga_m.dy;
-					tortuga_m.angulo = tortuga_m.dangulo;
+					logo_m.px = logo_m.dx;
+					logo_m.py = logo_m.dy;
+					logo_m.angulo = logo_m.dangulo;
 
 					ejecuto = true;
 					break;
@@ -381,7 +400,7 @@
 			}
 		}
 
-		animarTortuga();
+		animarlogo();
 	}
 
 	function completarComando(comando) {
@@ -462,8 +481,8 @@
 	intervaloRefresh = setInterval(function() {
 		var cx = cnv.width / 2;
 		var cy = (cnv.height - 130) / 2;
-		var tw = tortuga.width / 2;
-		var th = tortuga.height / 2;
+		var tw = logo.width / 2;
+		var th = logo.height / 2;
 		ctx.fillStyle = "rgb(255, 255, 255)";
 		ctx.fillRect(0, 0, cnv.width, cnv.height);
 
@@ -488,17 +507,17 @@
 
 		if (u < figura.length) {
 			if (isDrawing) {
-				ctx.lineTo(cx + tortuga.px, cy + tortuga.py);
+				ctx.lineTo(cx + logo.px, cy + logo.py);
 			} else {
-				ctx.moveTo(cx + tortuga.px, cy + tortuga.py);
+				ctx.moveTo(cx + logo.px, cy + logo.py);
 			}
 		}
 
 		ctx.stroke();
 		ctx.save();
-		ctx.translate(cx + tortuga.px, cy + tortuga.py);
-		ctx.rotate(-(tortuga.angulo - 90) * Math.PI / 180);
-		ctx.drawImage(tortuga, -tw, -th);
+		ctx.translate(cx + logo.px, cy + logo.py);
+		ctx.rotate(-(logo.angulo - 90) * Math.PI / 180);
+		ctx.drawImage(logo, -tw, -th);
 		ctx.restore();
 	}, 15);
 
