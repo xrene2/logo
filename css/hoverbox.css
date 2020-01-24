@@ -1,0 +1,114 @@
+body
+{
+	margin: 0 auto;
+	padding: 50px;
+	position: relative;
+	width: 690px;
+	background: linear-gradient(to bottom, burlywood, white);
+}
+
+a 
+{
+	text-decoration:none;
+	color: green;
+}
+
+hr
+{
+	color: red;
+	height: 0px;
+	border:1px dashed;
+}
+
+table
+{
+	width: 100%;
+	border-spacing: 10px;
+}
+
+table td
+{
+	color: #933;
+	font: 18px Georgia, serif;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+	text-align: justify;
+}
+
+table th
+{
+	color: #933;
+	font: 18px Georgia, serif;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+	text-align: justify;
+}
+
+table img
+{
+	float: left;
+}
+
+div {
+  height: 500px;
+  width: 100%;
+}
+
+.hoverbox
+{
+	cursor: default;
+	list-style: none;
+}
+
+.hoverbox a
+{
+	cursor: default;
+}
+
+.hoverbox a .preview
+{
+	display: none;
+}
+
+.hoverbox a:hover .preview
+{
+	display: block;
+	position: absolute;
+	top: -10px;
+	left: -20px;
+	z-index: 1;
+}
+
+.hoverbox img
+{
+	background: #fff;
+	border-color: #aaa #ccc #ddd #bbb;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	padding: 2px;
+	vertical-align: top;
+	width: 100px;
+	height: 80px;
+}
+
+.hoverbox li
+{
+	background: #eee;
+	border-color: #ddd #bbb #aaa #ccc;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	display: inline;
+	float: left;
+	margin: 3px;
+	padding: 5px;
+	position: relative;
+}
+
+.hoverbox .preview
+{
+	border-color: #000;
+	width: 140px;
+	height: 112px;
+}
