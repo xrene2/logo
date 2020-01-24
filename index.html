@@ -1,85 +1,62 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="es">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Tortuga Logo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=0.45">
+		<link rel="icon" type="image/ico" sizes="16x16" href="favicon.ico">
+		<link rel="stylesheet" href='css/hoverbox.css' type="text/css" media="screen, projection" />
+	</head>
+	
+	<body>
+		<a href="index.html"><img src="img/logo.png" alt="Banner Tortuga Logo" /></a>
+		<hr>
+		<ul class="hoverbox">
+			<li>
+			<a href="applogo/index.html" target="_blank"><img src="img/tortuga.png" alt="App Logo" /><img src="img/tortuga.png" alt="App Logo" class="preview" /></a>
+			</li>
+			
+			<li>
+			<a href="down/tortuga_logo.zip"><img src="img/download.png" alt="Download" /><img src="img/download.png" alt="Download" class="preview" /></a>
+			</li>
 
-<head>
-    <title>La Tortuga Logo Online</title>
-	<link rel="icon" type="image/ico" sizes="16x16" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/theme.css">
-</head>
+			<li>
+			<a href="documents.html"><img src="img/documents.png" alt="Documentaci&oacute;n" /><img src="img/documents.png" alt="Documentaci&oacute;n" class="preview" /></a>
+			</li>
 
-<body>
-    <canvas id="cnv"></canvas>
-    <div id="consola"></div>
-    <div id="iconInfo">
-        <img src="img/info.png" onclick="showInfo();">
-    </div>
-    <div id="info">
-        <div id="iconCerrar">
-            <img src="img/cerrar.png" onclick="hideInfo();">
-        </div>
-        <table>
-            <tr>
-                <td><img id="imgHelp" src="img/tortugaHelp.png"></td>
-                <td>
-                    <h2><div id="helpTitulo">La Tortuga Logo </div></h2>
-					Version 0.6 en espa&ntilde;ol
-					<br>por Prof. Guadalupe S.
-					<br><a target="_blank" href="html/creditos.html">Prop&oacute;sito  & Licencia</a>
+			<li>
+			<a href="podium.html"><img src="img/podium.png" alt="Podium" /><img src="img/podium.png" alt="Podium" class="preview" /></a>
+			</li>
+
+			<li>
+			<a href="license.html"><img src="img/copyleft.png" alt="CopyLeft" /><img src="img/copyleft.png" alt="CopyLeft" class="preview" /></a>
+			</li>
+		</ul>
+		<table cellspacing="10">
+			<tr>
+				<td>
+					Historia de la Tortuga Logo <p>
+					El lenguaje Logo fu&eacute; creado en la d&eacute;cada de los 60 por Seymour Papert para que
+					los ni&ntilde;os aprendieran ideas matem&aacute;ticas programando con este lenguaje. En las
+					siguientes d&eacute;cadas &eacute;l y su equipo continuaron con su desarrollo y tratando de crear un
+					programa con un entorno gr&aacute;fico que fuera a la vez potente y f&aacute;cil de usar.<p>
+					Todas las versiones del software Logo para los sistemas operativos Unix, MSDos, Macintosh y 
+					Windows desarrolladas inicialmente por la Universidad de California
+					(Berkeley), son gratuitas y pueden ser copiadas sin ning&uacute;n tipo de restricci&oacute;n por
+					instituciones educativas. De hecho Tortuga Logo es la versi&oacute;n libre del lenguaje Logo, que
+					se distribuye bajo la licencia p&uacute;blica general (GPL) del proyecto GNU de la “Free
+					Software Foundation”.<p>
+					El s&iacute;mbolo de Logo es una tortuga robotizada que se mueve bajo el control de un
+					ordenador dibujando a medida que se desplaza por la pantalla. En algunas versiones de
+					este lenguaje la tortuga ha evolucionado hasta convertirse en otro tipo de objetos. Por
+					ejemplo, la Tortuga Logo se ha convertido en una ara&ntilde;a.<p>
+					La versi&oacute;n que se intentar&aacute; explicar en esta documentaci&oacute;n es la versi&oacute;n que
+					presenta el desrrollador John Villar, ampliada por Wilfried Elmenreich. Misma que es modificada y traducida 
+					al espa&ntilde;ol por la Profesora <a href="mailto:vapimx@yahoo.com.mx?Subject=Hola..." target="_top">Guadalupe S.</a>
 				</td>
-            </tr>
-        </table>
-        <br> Lista de comandos con ejemplos:
-		<br>
-        <br>
-        <table>
-            <tr>
-                <td><img src="img/fd.png"></td>
-                <td><b>AV&nbsp;</b><i>5</i></td>
-                <td>Avanza 5 pasos.</td>
-            </tr>
-            <tr>
-                <td><img src="img/bk.png"></td>
-                <td><b>RT&nbsp;</b><i>2</i></td>
-                <td>Retrocede 2 pasos.</td>
-            </tr>
-            <tr>
-                <td><img src="img/rt.png"></td>
-                <td><b>GD&nbsp;</b><i>3</i></td>
-                <td>Gira a la Derecha.</td>
-            </tr>
-            <tr>
-                <td><img src="img/lt.png"></td>
-                <td><b>GI&nbsp;</b><i>3</i></td>
-                <td>Gira a la Izquierda.</td>
-            </tr>
-            <tr>
-                <td><img src="img/pu.png"></td>
-                <td><b>SP&nbsp;</b></td>
-                <td>Sin Pluma (no dibuja).</td>
-            </tr>
-            <tr>
-                <td><img src="img/pd.png"></td>
-                <td><b>CP&nbsp;</b></td>
-                <td>Con Pluma (si dibuja).</td>
-            </tr>
-            <tr>
-                <td><img src="img/tortuga.png"></td>
-                <td><b>PV&nbsp;</b></td>
-                <td>Posici&oacute;n vertical.</td>
-            </tr>
-            <tr>
-                <td><img src="img/cs.png"></td>
-                <td><b>LP&nbsp;</b></td>
-                <td>Limpia todo y regresa al inicio.</td>
-            </tr>
-            <tr>
-                <td><img src="img/repeat.png"></td>
-                <td><b>REPITE&nbsp;</b><i>n&nbsp;...</i>&nbsp;</td>
-                <td>repite <b>n</b> veces los comandos.</td>
-            </tr>
-        </table>
-        <br> Presiona F11 para ver en pantalla completa.
-    </div>
-	<script src="js/tortuga.js"></script> 
-</body>
-
+			</tr>
+		<table>
+		<hr>
+		<div><br></div>
+	</body>
 </html>
