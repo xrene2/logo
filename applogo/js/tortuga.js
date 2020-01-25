@@ -246,6 +246,24 @@
 
 			return a;
 		}
+	}, {
+		nom: "trigono",
+		f: function(a) {
+			isDrawing = false;
+			logo_up = "./img/trigono_up.png";
+			logo_down = "./img/trigono.png";
+			logo.src = logo_up;
+			moduloDelta = 0.6;
+			var obj = {
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
+				t: isDrawing
+			};
+			figura.push(obj);
+
+			return a;
+		}
 	}];
 
 	var figura = new Array();
