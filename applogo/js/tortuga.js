@@ -30,6 +30,9 @@
 
 	var stretch = 4; //how many pixels is one turtle step
 	var consoleLines = 3; //how many lines should be presented in the console
+	
+	var colorLinea = "#000000"; // Line's color
+	var colorFondo = "rgb(255, 255, 255)";
 
 	var comandos = [{
 		nom: "av",
@@ -262,6 +265,132 @@
 			};
 			figura.push(obj);
 
+			return a;
+		}
+	}, {
+		nom: "rocket",
+		f: function(a) {
+			isDrawing = false;
+			logo_up = "./img/rocket_up.png";
+			logo_down = "./img/rocket.png";
+			logo.src = logo_up;
+			moduloDelta = 0.9;
+			var obj = {
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
+				t: isDrawing
+			};
+			figura.push(obj);
+
+			return a;
+		}
+	}, {
+		nom: "bat",
+		f: function(a) {
+			isDrawing = false;
+			logo_up = "./img/bat_up.png";
+			logo_down = "./img/bat.png";
+			logo.src = logo_up;
+			moduloDelta = 0.4;
+			var obj = {
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
+				t: isDrawing
+			};
+			figura.push(obj);
+
+			return a;
+		}
+	}, {
+		nom: "cometa",
+		f: function(a) {
+			isDrawing = false;
+			logo_up = "./img/cometa_up.png";
+			logo_down = "./img/cometa.png";
+			logo.src = logo_up;
+			moduloDelta = 0.4;
+			var obj = {
+				x: logo_m.px,
+				y: logo_m.py,
+				a: logo_m.dangulo,
+				t: isDrawing
+			};
+			figura.push(obj);
+
+			return a;
+		}
+	}, {
+		nom: "red",
+		f: function(a) {
+			colorLinea = "#FF0000";
+			return a;
+		}
+	}, {
+		nom: "green",
+		f: function(a) {
+			colorLinea = "#00FF00";
+			return a;
+		}
+	}, {
+		nom: "blue",
+		f: function(a) {
+			colorLinea = "#0000FF";
+			return a;
+		}
+	}, {
+		nom: "black",
+		f: function(a) {
+			colorLinea = "#000000";
+			return a;
+		}
+	}, {
+		nom: "white",
+		f: function(a) {
+			colorLinea = "#FFFFFF";
+			return a;
+		}
+	}, {
+		nom: "yellow",
+		f: function(a) {
+			colorLinea = "#FFFF00";
+			return a;
+		}
+	}, {
+		nom: "bred",
+		f: function(a) {
+			colorFondo = "rgb(255, 0, 0)";
+			return a;
+		}
+	}, {
+		nom: "bgreen",
+		f: function(a) {
+			colorFondo = "rgb(0, 255, 0)";
+			return a;
+		}
+	}, {
+		nom: "bblue",
+		f: function(a) {
+			colorFondo = "rgb(0, 0, 255)";
+			return a;
+		}
+	}, {
+		nom: "bblack",
+		f: function(a) {
+			colorFondo = "rgb(0, 0, 0)";
+			return a;
+		}
+	}, {
+		nom: "bwhite",
+		f: function(a) {
+			colorFondo = "rgb(255, 255, 255)";
+			return a;
+		}
+	}, {
+		nom: "byellow",
+		f: function(a) {
+			colorFondo = "rgb(255, 255, 0)";
 			return a;
 		}
 	}];
@@ -501,7 +630,7 @@
 		var cy = (cnv.height - 130) / 2;
 		var tw = logo.width / 2;
 		var th = logo.height / 2;
-		ctx.fillStyle = "rgb(255, 255, 255)";
+		ctx.fillStyle = colorFondo;
 		ctx.fillRect(0, 0, cnv.width, cnv.height);
 
 		ctx.fillStyle = "black";
@@ -531,6 +660,7 @@
 			}
 		}
 
+		ctx.strokeStyle = colorLinea;
 		ctx.stroke();
 		ctx.save();
 		ctx.translate(cx + logo.px, cy + logo.py);
