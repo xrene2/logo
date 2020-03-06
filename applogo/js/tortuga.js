@@ -1,5 +1,6 @@
 	var logo_up = "./img/tortuga_up.png";
 	var logo_down = "./img/tortuga.png";
+	var factor = 30;
 	var prompt = ">";
 	var linea = "";
 	var vieja_linea = "";
@@ -74,7 +75,7 @@
 	}, {
 		nom: "gd",
 		f: function(a) {
-			var delta = new Number(a[0])*30;
+			var delta = new Number(a[0])*factor;
 			if (isNaN(delta)) delta = 0;
 			logo_m.dangulo = logo_m.angulo - delta;
 
@@ -91,7 +92,7 @@
 	}, {
 		nom: "gi",
 		f: function(a) {
-			var delta = new Number(a[0])*30;
+			var delta = new Number(a[0])*factor;
 			if (isNaN(delta)) delta = 0;
 			logo_m.dangulo = logo_m.angulo + delta;
 
@@ -391,6 +392,18 @@
 		nom: "byellow",
 		f: function(a) {
 			colorFondo = "rgb(255, 255, 0)";
+			return a;
+		}
+	}, {
+		nom: "grados",
+		f: function(a) {
+			factor = 1;
+			return a;
+		}
+	}, {
+		nom: "horas",
+		f: function(a) {
+			factor = 30;
 			return a;
 		}
 	}];
